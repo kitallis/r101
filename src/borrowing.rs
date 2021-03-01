@@ -30,19 +30,19 @@ pub fn mutable_until_borrowed() {
     let shared_reference: &String = &thing;
 
     // This is not allowed.
-    // ⬇️⬇️Uncomment and see the compile error. ⬇️⬇
+    // ⬇⬇ Uncomment and see the compile error. ⬇⬇
     // thing.push('s');
 
     print_shared_borrow(shared_reference);
 
     // This is still not allowed.
-    // ⬇️⬇️Uncomment and see the compile error. ⬇️⬇
+    // ⬇⬇ Uncomment and see the compile error. ⬇⬇
     // thing.push('s');
 
     print_shared_borrow(shared_reference);
 
     // This is again, not allowed.
-    // ⬇️⬇️Uncomment and see the compile error. ⬇️⬇
+    // ⬇⬇ Uncomment and see the compile error. ⬇⬇
     // thing.push('s');
     // thing cannot be mutated until it goes out of scope completely.
 
@@ -66,7 +66,7 @@ pub fn borrow_lifetime() {
     thing.push('s');
 
     // Similary, `shared_reference` is now out of scope.
-    // ⬇️⬇️Uncomment and see the compile error. ⬇️⬇
+    // ⬇⬇ Uncomment and see the compile error. ⬇⬇
     // print_shared_borrow(shared_reference);
 }
 
@@ -76,6 +76,6 @@ pub fn print_shared_borrow(thing: &String) {
     // We cannot do this because shared data by default is immutable. Only reads are allowed.
     // Certain types can mutate shared data, but the API will suggest so and it'll be transparent to the caller.
     // It's safe to assume that, generally, that's not the case.
-    // ⬇️⬇️Uncomment and see the compile error. ⬇️⬇
+    // ⬇⬇ Uncomment and see the compile error. ⬇⬇
     // thing.push('s');
 }

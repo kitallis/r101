@@ -3,7 +3,6 @@ pub fn slice() {
 
     // This is a string slice, notice the &thing.
     // It skips the first byte and starts from the first byte of the String buffer.
-
     print_slice(&thing[1..]);
     print_slice(&thing);
 
