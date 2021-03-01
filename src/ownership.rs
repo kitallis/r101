@@ -6,7 +6,7 @@ pub fn moves() {
     print_ownership(thing);
 
     // Notice that we now cannot access thing in this scope, since `print_ownership` now owns `thing`.
-    // ⬇️⬇️Uncomment and see the compiler error ⬇️⬇️
+    // ⬇⬇ Uncomment and see the compiler error. ⬇⬇
     // println!("I love, {:?}, again.", thing);
 }
 
